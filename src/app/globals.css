@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --pink: #EF6C8B;
+  --green: #4CAF50;
+  --yellow: #F9C639;
+  --orange: #F37321;
+  --teal: #45BFB5;
+  --dteal: #2A9D8F;
+  --dgreen: #3DAA6D;
+  --ink: #1a1a2e;
+  --cream: #FFF8F0;
+  --blush: #FFE8EE;
+  --mint: #E0F5EC;
+  --sky: #E0F4F8;
+  --sun: #FFF7D6;
+  --lav: #F0E6F6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* Giant display typography */
+.giant {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -2px;
+}
+.giant.xxl { font-size: clamp(60px, 10vw, 140px); }
+.giant.xl { font-size: clamp(48px, 7vw, 100px); }
+.giant.lg { font-size: clamp(36px, 5vw, 72px); }
+
+/* Rainbow gradient text */
+.rainbow {
+  display: block;
+  background: linear-gradient(135deg, var(--teal), var(--green), var(--yellow), var(--orange), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% auto;
+  animation: shimmer 5s ease infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Scroll reveal animations */
+.reveal, .reveal-l, .reveal-r, .reveal-s {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal { transform: translateY(40px); }
+.reveal-l { transform: translateX(-40px); }
+.reveal-r { transform: translateX(40px); }
+.reveal-s { transform: scale(0.9); }
+.vis { opacity: 1 !important; transform: none !important; }
+
+/* Laurels marquee */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Hero card float */
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-12px) scale(1); }
+}
+
+/* Floating stickers */
+@keyframes bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(5deg); }
+}

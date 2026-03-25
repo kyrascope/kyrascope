@@ -1,0 +1,30 @@
+{
+  "name": "kyrascope-site",
+  "version": "1.0.0",
+  "description": "Kyrascope \u2014 A Kaleidoscope of Ideas. Next.js website for kyrascope.com",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "gray-matter": "^4.0.3",
+    "next": "^16.2.1",
+    "postcss": "^8.5.8",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2"
+  },
+  "private": true
+}
